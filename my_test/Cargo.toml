@@ -1,0 +1,20 @@
+[package]
+name = "my_test"
+version = "1.0.0"
+authors = ["Benoit Brisset <benoit.brisset@gmail.com>"]
+
+[dependencies]
+log = "0.4"
+
+[dependencies.lib_test]
+path = "libs/lib_test"
+
+# Add integration tests
+[[test]]
+name = "my_test_tests"
+path = "tests/my_test_tests.rs"
+
+# Add tests libs
+[[test]]
+name = "lib_test"
+path = "libs/lib_test/src/lib.rs"
